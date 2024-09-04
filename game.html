@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UHS STEM-Ed - Math Challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo-transparent.png" type="image/x-icon">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body class="game-page">
+    <a href="index.html" class="stem-ed-logo">
+        <img src="img/logo-transparent.png" alt="STEM-Ed Logo"/>
+    </a>
+    
+    <div id="math-question"></div>
+    
+    <div class="answer-container">
+        <form id="answer-form">
+            <input type="text" id="answer-input" placeholder="Enter your answer" autocomplete="off">
+            <button type="submit" id="submit-button">=</button>
+        </form>
+    </div>
+    <footer>
+        <div class="instagram-username">
+            <span>IG: @stem.ed_</span>
+        </div>
+    <script src="js/gameLogic.js"></script> 
+    <script src="js/game.js"></script>
+</body>
+</html>
