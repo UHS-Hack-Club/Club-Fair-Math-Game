@@ -177,11 +177,13 @@ body {
 #submit-button:hover {
     background-color: var(--primary-color);
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(210, 189, 189, 0.3);
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 #submit-button:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 3px rgba(236, 55, 80, 0.5); 
 }
 
 @keyframes shake {
@@ -198,10 +200,10 @@ body {
 .instagram-username {
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    right: 15px;
     display: flex;
     align-items: center;
-    color: white;
+    color: (--body-text-color);
     font-family: var(--font-family);
     font-size: 1.5em;
     opacity: 0.7;
