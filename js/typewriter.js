@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typewriterElement = document.getElementById('typewriter');
     const cursorElement = document.querySelector('.cursor');
     const welcomeMsgs = [
-        "UHS STEM-Ed presents...",
+        "UHS Hack Club presents...",
         "A Math Challenge!",
         "Answer correctly, earn a prize!",
         "Ready?"

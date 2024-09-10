@@ -26,10 +26,10 @@
 
 /* CSS Variables */
 :root {
-    --primary-color: #15dae5;
+    --primary-color: #ec3750;
     --text-color: #ffffff;
-    --body-text-color: #4b4b4b;
-    --background-color: #000000;
+    --body-text-color: #000000;
+    --background-color: #ffffff;
     --font-family: "Phantom Sans", Arial, sans-serif;
 }
 
@@ -49,14 +49,14 @@ body {
     height: 100%;
 }
 
-.stem-ed-logo {
+.logo {
     position: absolute;
-    top: -40px;
-    left: 8px;
+    top: 5px;
+    left: 10px;
 }
 
-.stem-ed-logo img {
-    width: 275px;
+.logo img {
+    width: 220px;
     border: 0;
     z-index: 999;
 }
@@ -115,7 +115,7 @@ body {
 }
 
 .index-page .start-button:hover {
-    box-shadow: 0 40px 50px rgba(2, 135, 139, 0.5); 
+    box-shadow: 0 10px 20px rgba(135, 2, 35, 0.5); 
 }
 
 /* Game page styles */
@@ -127,7 +127,7 @@ body {
 }
 
 .game-page #math-question {
-    color: var(--text-color);
+    color: var(--body-text-color);
     font-size: 7em;
     position: absolute;
     top: 55%;
