@@ -82,7 +82,7 @@ body {
     overflow: hidden;
     display: inline-block;
     position: relative;
-    margin-top: 20vh;
+    margin-top: 15vh;
     word-spacing: 15px;
 }
 
@@ -177,7 +177,11 @@ body {
 #submit-button:hover {
     background-color: var(--primary-color);
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(210, 189, 189, 0.3);
+}
+#submit-button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 @keyframes shake {
