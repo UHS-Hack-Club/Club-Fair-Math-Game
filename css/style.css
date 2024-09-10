@@ -1,0 +1,243 @@
+/* Fonts */
+@font-face {
+    font-family: "Phantom Sans";
+    src: url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff2") format("woff2"),
+         url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Phantom Sans";
+    src: url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff2") format("woff2"),
+         url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Phantom Sans";
+    src: url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff2") format("woff2"),
+         url("https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #ec3750;
+    --text-color: #ffffff;
+    --body-text-color: #000000;
+    --background-color: #ffffff;
+    --font-family: "Phantom Sans", Arial, sans-serif;
+}
+
+/* Global styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.logo img {
+    width: 220px;
+    border: 0;
+    z-index: 999;
+}
+
+/* Index Page Styles */
+.index-page {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.index-page h1 {
+    font-family: var(--font-family);
+    font-weight: lighter; 
+    color: var(--primary-color);
+    font-size: 5em;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    margin-top: 15vh;
+    word-spacing: 15px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2.5px;
+    height: 1em;
+    background-color: var(--primary-color);
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+    vertical-align: bottom;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.index-page .start-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 2em;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    margin-top: 10vh;
+}
+
+.index-page .start-button:hover {
+    box-shadow: 0 10px 20px rgba(135, 2, 35, 0.5); 
+}
+
+/* Game page styles */
+.game-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.game-page #math-question {
+    color: var(--body-text-color);
+    font-size: 7em;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Form styles */
+.answer-container {
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#answer-form {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#answer-input {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    width: 250px;
+}
+
+#submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#submit-button:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 3px rgba(236, 55, 80, 0.5); 
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* Instagram username styles */
+.instagram-username {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    color: (--body-text-color);
+    font-family: var(--font-family);
+    font-size: 1.5em;
+    opacity: 0.7;
+    z-index: 1000;
+}
+
+.instagram-logo {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* MathJax styles */
+.MathJax {
+    font-family: var(--font-family) !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .game-page #math-question {
+        font-size: 4em;
+    }
+    
+    .answer-container {
+        bottom: 50px;
+    }
+    
+    #answer-input {
+        width: 200px;
+        font-size: 1.1em;
+    }
+    
+    #submit-button {
+        padding: 12px 20px;
+        font-size: 1.1em;
+    }
+}
